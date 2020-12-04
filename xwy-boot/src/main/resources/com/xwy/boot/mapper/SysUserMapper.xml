@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xwy.boot.mapper.SysUserMapper">
+    <!-- BaseResultMap和表字段一致，不允许改动 -->
+    <resultMap id="BaseResultMap" type="com.xwy.entity.SysUser">
+        <result column="ID" property="id" />
+        <result column="USERNAME" property="username" />
+        <result column="NAME" property="name" />
+        <result column="STATUS" property="status" />
+        <result column="PASSWORD" property="password" />
+        <result column="EMAIL" property="email" />
+        <result column="MOBILE" property="mobile" />
+        <result column="IS_LOCK" property="isLock" />
+        <result column="LOCK_TIME" property="lockTime" />
+        <result column="LOGIN_COUNT" property="loginCount" />
+        <result column="LOGIN_FAILURE_COUNT" property="loginFailureCount" />
+        <result column="LOGIN_IP" property="loginIp" />
+        <result column="LOGIN_TIME" property="loginTime" />
+        <result column="CREATE_BY" property="createBy" />
+        <result column="CREATE_DATE" property="createDate" />
+        <result column="UPDATE_BY" property="updateBy" />
+        <result column="UPDATE_DATE" property="updateDate" />
+        <result column="REMARKS" property="remarks" />
+        <result column="DEL_FLAG" property="delFlag" />
+    </resultMap>
+
+    <!-- BaseResultMap和表字段一致，不允许改动 -->
+    <sql id="base_column">
+        id, username, name, status, password, email, mobile, is_lock, lock_time, login_count, login_failure_count, login_ip, login_time, create_by, create_date, update_by, update_date, remarks, del_flag
+    </sql>	
+</mapper>

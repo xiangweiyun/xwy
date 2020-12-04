@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xwy.boot.mapper.SysLoginLogMapper">
+    <!-- BaseResultMap和表字段一致，不允许改动 -->
+    <resultMap id="BaseResultMap" type="com.xwy.entity.SysLoginLog">
+        <result column="ID" property="id" />
+        <result column="OPER_TYPE" property="operType" />
+        <result column="RESULT_TYPE" property="resultType" />
+        <result column="REMOTE_ADDR" property="remoteAddr" />
+        <result column="USER_AGENT" property="userAgent" />
+        <result column="OPER_TIME" property="operTime" />
+        <result column="ADDRESS" property="address" />
+        <result column="BROWSER_TYPE" property="browserType" />
+        <result column="LOGIN_TYPE" property="loginType" />
+        <result column="EQUIPMENT" property="equipment" />
+        <result column="LOGON_ID" property="logonId" />
+        <result column="CREATE_BY" property="createBy" />
+        <result column="CREATE_DATE" property="createDate" />
+        <result column="UPDATE_BY" property="updateBy" />
+        <result column="UPDATE_DATE" property="updateDate" />
+        <result column="REMARKS" property="remarks" />
+        <result column="DEL_FLAG" property="delFlag" />
+    </resultMap>
+
+    <!-- BaseResultMap和表字段一致，不允许改动 -->
+    <sql id="base_column">
+        id, oper_type, result_type, remote_addr, user_agent, oper_time, address, browser_type, login_type, equipment, logon_id, create_by, create_date, update_by, update_date, remarks, del_flag
+    </sql>	
+</mapper>

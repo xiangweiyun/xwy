@@ -1,0 +1,33 @@
+server:
+  #服务端口
+  port: 9001 
+spring:
+  application:
+    #服务名称
+    name: xwy-gateway 
+  profiles:
+    #指定开发环境
+    active: dev
+  main:
+    #覆盖重名的bean，避免bean冲突
+    allow-bean-definition-overriding: true 
+  cloud:
+    nacos:
+      discovery:
+        #允许nacos发现服务的nacos服务器地址
+        server-addr: 127.0.0.1:8848
+      config:
+        # 指定配置的后缀，支持 properties、yaml、yml，默认为 properties
+        file-extension: yml
+        #nacos服务器地址
+        server-addr: ${spring.cloud.nacos.discovery.server-addr}
+        #默认为Public命名空间,可以省略不写
+        namespace: 
+        #文件名 -- 如果没有配置则默认为 ${spring.appliction.name}
+        prefix: xwy-gateway
+        #指定配置群组 --如果是Public命名空间 则可以省略群组配置
+        group: DEFAULT_GROUP
+        #共享配置
+        shared-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        #共享配置自动刷新
+        refreshable-dataids: application-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
