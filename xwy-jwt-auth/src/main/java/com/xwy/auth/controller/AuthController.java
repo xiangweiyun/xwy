@@ -10,6 +10,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,10 +21,10 @@ import com.xwy.auth.properties.JwtProperties;
 import com.xwy.auth.util.JwtTokenUtil;
 import com.xwy.auth.validator.IReqValidator;
 import com.xwy.auth.vo.AuthRequestVo;
-import com.xwy.common.constant.XwyRspCon;
 import com.xwy.common.utils.BlankUtils;
-import com.xwy.common.utils.DataformResult;
 import com.xwy.common.utils.jwt.TokenUtil;
+import com.xwy.framework.constant.XwyRspCon;
+import com.xwy.framework.utils.DataformResult;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -69,7 +70,7 @@ public class AuthController {
 			+ " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{\"code\":返回状态码,\"msg\":返回消息,\"datas(返回数据)\":{\"menuData(菜单数据)\":[],\"userData(用户数据)\":{},\"permsData(按钮权限数据)\":[],\"authData(认证信息，token以及过期时间等数据)\":{}}}<br>", response = String.class)
 	@ApiImplicitParams({
 			@ApiImplicitParam(name = "authRequestVo", dataType = "authRequestVo", value = "authRequestVo实体的json类型( fans后台系统用户认证方式)<br>{\"userName\":\"admin\",\"password\":\"123456\",\"logintype\":\"1\",\"captcha\":\"9aqd\",\"captchaId\":\"4a9cd3a2-ab45-46c6-9870-b91659c88fd51579329664992\"}") })
-	public DataformResult<Map<String, Object>> auth(AuthRequestVo authRequestVo) {
+	public DataformResult<Map<String, Object>> auth(@RequestBody AuthRequestVo authRequestVo) {
 		try {
 			DataformResult<Map<String, Object>> auth = reqValidator.validate(authRequestVo);
 			final String randomKey = jwtTokenUtil.getRandomKey();

@@ -56,6 +56,10 @@
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
 		<!-- 公共资源池 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -110,7 +114,10 @@
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>com.xwy.framework</groupId>
+			<artifactId>xwy-framework</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>com.xwy.swagger</groupId>
 			<artifactId>xwy-swagger</artifactId>

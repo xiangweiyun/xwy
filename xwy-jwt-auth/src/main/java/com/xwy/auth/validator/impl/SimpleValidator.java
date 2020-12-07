@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import com.xwy.auth.validator.IReqValidator;
 import com.xwy.auth.vo.AuthRequestVo;
-import com.xwy.common.constant.XwyRspCon;
-import com.xwy.common.utils.DataformResult;
+import com.xwy.framework.constant.XwyRspCon;
+import com.xwy.framework.utils.DataformResult;
 
 /**
  * 直接验证账号密码是不是admin

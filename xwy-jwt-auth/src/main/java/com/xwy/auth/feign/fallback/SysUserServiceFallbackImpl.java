@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.xwy.auth.feign.SysUserService;
-import com.xwy.common.utils.DataformResult;
+import com.xwy.framework.utils.DataformResult;
 
 /**
  * 系统用户信息服务的fallback

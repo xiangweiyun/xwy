@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-	<property name="appName" value="xwy" />
+	<property name="appName" value="xwy/xwy-jwt-auth" />
 	<!-- 控制台输出 -->
 	<appender name="console"
 		class="ch.qos.logback.core.ConsoleAppender">
 		<encoder
 			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"
 			charset="UTF-8">
-			<pattern>%d{yyyy-MM-dd HH:mm:ss} %5p [%t]
-				%replace(%caller{1}){'\t|Caller.{1}0|\r\n| at ', ''} - %m%n
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %5p [%t] %replace(%caller{1}){'\t|Caller.{1}0|\r\n| at ', ''} - %m%n
 			</pattern>
 		</encoder>
 	</appender>
@@ -51,8 +50,7 @@
 		<encoder
 			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"
 			charset="UTF-8">
-			<pattern>%d{yyyy-MM-dd HH:mm:ss} %5p [%t]
-				%replace(%caller{1}){'\t|Caller.{1}0|\r\n| at ', ''} - %m%n
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %5p [%t] %replace(%caller{1}){'\t|Caller.{1}0|\r\n| at ', ''} - %m%n
 			</pattern>
 		</encoder>
 	</appender>
@@ -73,8 +71,7 @@
 		<encoder
 			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder"
 			charset="UTF-8">
-			<pattern>%d{yyyy-MM-dd HH:mm:ss} %5p [%t]
-				%replace(%caller{1}){'\t|Caller.{1}0|\r\n| at ', ''} - %m%n
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} %5p [%t] %replace(%caller{1}){'\t|Caller.{1}0|\r\n| at ', ''} - %m%n
 			</pattern>
 		</encoder>
 	</appender>

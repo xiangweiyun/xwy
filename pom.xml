@@ -181,11 +181,11 @@
 				<version>${commons-io.version}</version>
 			</dependency>
 			<!-- 公共资源池 -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-pool2</artifactId>
-                <version>${common-pool.version}</version>
-            </dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-pool2</artifactId>
+				<version>${common-pool.version}</version>
+			</dependency>
 			<!-- commons end -->
 			<dependency>
 				<groupId>com.xwy.common</groupId>
@@ -200,6 +200,11 @@
 			<dependency>
 				<groupId>com.xwy.swagger</groupId>
 				<artifactId>xwy-swagger</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.xwy.framework</groupId>
+				<artifactId>xwy-framework</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<!-- guava Begin -->
@@ -218,7 +223,7 @@
 		<module>xwy-entity</module>
 		<module>xwy-gateway</module>
 		<module>xwy-jwt-auth</module>
-		<module>xwy-framework</module>
 		<module>xwy-swagger</module>
+		<module>xwy-framework</module>
 	</modules>
 </project>

@@ -1,6 +1,7 @@
 package com.xwy.boot.service.impl;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -17,6 +18,7 @@ import com.xwy.boot.mapper.SysUserMapper;
 import com.xwy.boot.service.SysUserService;
 import com.xwy.common.constant.SysConstant;
 import com.xwy.common.exception.XwyException;
+import com.xwy.common.utils.BlankUtils;
 import com.xwy.common.utils.PasswordHash;
 import com.xwy.common.utils.SecurityUtils;
 import com.xwy.common.utils.StringUtils;
@@ -73,41 +75,50 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 
 	@Override
 	public SysUser getByUsernameAndPassword(String username, String password) {
-		QueryWrapper<SysUser> wrapper = Wrappers.query();
-		wrapper.eq(SysUser.USERNAME, username);
+		SysUser sysUser = getByUserName(username);
+		boolean result = false;
 		try {
-			wrapper.eq(SysUser.PASSWORD, PasswordHash.createHash((password)));
+			result = PasswordHash.validatePassword(password, sysUser.getPassword());
 		} catch (Exception e) {
 			log.error("用户密码加密错误");
 			throw new XwyException("用户密码加密错误");
 		}
-		return super.getOne(wrapper);
+		if (!result) {
+			return null;
+		}
+		return sysUser;
 	}
 
 	@Override
 	public SysUser getByEmailAndPassword(String email, String password) {
-		QueryWrapper<SysUser> wrapper = Wrappers.query();
-		wrapper.eq(SysUser.EMAIL, email);
+		SysUser sysUser = getByEmail(email);
+		boolean result = false;
 		try {
-			wrapper.eq(SysUser.PASSWORD, PasswordHash.createHash((password)));
+			result = PasswordHash.validatePassword(password, sysUser.getPassword());
 		} catch (Exception e) {
 			log.error("用户密码加密错误");
 			throw new XwyException("用户密码加密错误");
 		}
-		return super.getOne(wrapper);
+		if (!result) {
+			return null;
+		}
+		return sysUser;
 	}
 
 	@Override
 	public SysUser getByMobileAndPassword(String mobile, String password) {
-		QueryWrapper<SysUser> wrapper = Wrappers.query();
-		wrapper.eq(SysUser.MOBILE, mobile);
+		SysUser sysUser = getByMobile(mobile);
+		boolean result = false;
 		try {
-			wrapper.eq(SysUser.PASSWORD, PasswordHash.createHash((password)));
+			result = PasswordHash.validatePassword(password, sysUser.getPassword());
 		} catch (Exception e) {
 			log.error("用户密码加密错误");
 			throw new XwyException("用户密码加密错误");
 		}
-		return super.getOne(wrapper);
+		if (!result) {
+			return null;
+		}
+		return sysUser;
 	}
 
 	@Override
@@ -137,6 +148,42 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> impl
 			rt = rt.substring(0, rt.lastIndexOf(","));
 		}
 		return rt;
+	}
+
+	@Override
+	public SysUser getByUserName(String username) {
+		QueryWrapper<SysUser> wrapper = Wrappers.query();
+		wrapper.eq(SysUser.USERNAME, username);
+		List<SysUser> list = super.list(wrapper);
+		SysUser sysUser = null;
+		if (BlankUtils.isNotBlank(list)) {
+			sysUser = list.get(0);
+		}
+		return sysUser;
+	}
+
+	@Override
+	public SysUser getByEmail(String email) {
+		QueryWrapper<SysUser> wrapper = Wrappers.query();
+		wrapper.eq(SysUser.EMAIL, email);
+		List<SysUser> list = super.list(wrapper);
+		SysUser sysUser = null;
+		if (BlankUtils.isNotBlank(list)) {
+			sysUser = list.get(0);
+		}
+		return sysUser;
+	}
+
+	@Override
+	public SysUser getByMobile(String mobile) {
+		QueryWrapper<SysUser> wrapper = Wrappers.query();
+		wrapper.eq(SysUser.MOBILE, mobile);
+		List<SysUser> list = super.list(wrapper);
+		SysUser sysUser = null;
+		if (BlankUtils.isNotBlank(list)) {
+			sysUser = list.get(0);
+		}
+		return sysUser;
 	}
 
 }

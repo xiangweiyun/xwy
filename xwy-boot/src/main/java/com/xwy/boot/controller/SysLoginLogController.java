@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.xwy.boot.service.SysLoginLogService;
-import com.xwy.common.utils.DataformResult;
 import com.xwy.entity.SysLoginLog;
+import com.xwy.framework.utils.DataformResult;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;

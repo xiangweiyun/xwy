@@ -15,7 +15,7 @@
 		<!--springBoot 相关依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
 		<!-- nacos注册中心依赖 -->
 		<dependency>
@@ -48,8 +48,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.xwy.common</groupId>
-			<artifactId>xwy-common</artifactId>
+			<groupId>com.xwy.framework</groupId>
+			<artifactId>xwy-framework</artifactId>
 		</dependency>
 	</dependencies>
 </project>

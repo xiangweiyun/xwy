@@ -3,7 +3,7 @@ package com.xwy.auth.validator;
 import java.util.Map;
 
 import com.xwy.auth.vo.AuthRequestVo;
-import com.xwy.common.utils.DataformResult;
+import com.xwy.framework.utils.DataformResult;
 
 /**
  * 验证请求/auth接口时,请求参数的正确性

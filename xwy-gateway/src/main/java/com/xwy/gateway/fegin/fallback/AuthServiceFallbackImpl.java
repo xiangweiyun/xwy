@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.xwy.common.utils.DataformResult;
+import com.xwy.framework.utils.DataformResult;
 import com.xwy.gateway.fegin.AuthService;
 
 /**

@@ -1,8 +1,8 @@
-package com.xwy.common.utils;
+package com.xwy.framework.utils;
 
 import java.io.Serializable;
 
-import com.xwy.common.constant.XwyRspCon;
+import com.xwy.framework.constant.XwyRspCon;
 
 import lombok.Getter;
 import lombok.Setter;

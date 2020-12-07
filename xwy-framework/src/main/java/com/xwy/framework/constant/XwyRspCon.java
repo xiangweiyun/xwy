@@ -1,4 +1,4 @@
-package com.xwy.common.constant;
+package com.xwy.framework.constant;
 
 /**
  * 返回信息枚举类
@@ -43,9 +43,13 @@ public enum XwyRspCon {
 	 */
 	FLAG_OLDPWD_ERROR(1004, "原密码错误!"),
 	/**
+	 * 用户名密码错误!
+	 */
+	FLAG_LOGIN_ERROR(1005, "用户名密码错误!"),
+	/**
 	 * 用户名密码或验证码错误!
 	 */
-	FLAG_LOGIN_ERROR(1006, "用户名密码或验证码错误!"),
+	FLAG_LOGINORCAPTCHA_ERROR(1006, "用户名密码或验证码错误!"),
 	/**
 	 * 登录类型不能为空!
 	 */

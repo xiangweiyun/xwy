@@ -55,7 +55,6 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>com.xwy.common</groupId>
 			<artifactId>xwy-common</artifactId>

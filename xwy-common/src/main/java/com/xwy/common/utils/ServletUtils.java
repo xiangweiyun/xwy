@@ -11,6 +11,8 @@ import javax.servlet.http.HttpSession;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import com.xwy.common.utils.Convert;
+
 /**
  * 请求工具类
  * 

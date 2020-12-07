@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 
 import com.alibaba.fastjson.JSON;
-import com.xwy.common.utils.DataformResult;
+import com.xwy.framework.utils.DataformResult;
 import com.xwy.gateway.fegin.AuthService;
 import com.xwy.gateway.properties.IgnoreUrlsProperties;
 

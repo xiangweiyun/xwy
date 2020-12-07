@@ -6,13 +6,15 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * @ClassName: AuthServerApplication
- * @Description: jwt认证服务端
- * @author fanhaohao
- * @date 2019年1月24日 上午9:48:16
+ * jwt认证服务端
+ * 
+ * @author xiangwy
+ * @date: 2020-12-07 08:59:14
+ * @Copyright: Copyright (c) 2006 - 2020
+ * @Company: 湖南创星科技股份有限公司
+ * @Version: V1.0
  */
-
-@SpringBootApplication(scanBasePackages = { "com.xwy" })
+@SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
 public class AuthApplication {

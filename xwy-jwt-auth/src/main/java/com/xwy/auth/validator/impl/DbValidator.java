@@ -12,10 +12,10 @@ import com.xwy.auth.feign.SysUserService;
 import com.xwy.auth.validator.IReqValidator;
 import com.xwy.auth.vo.AuthRequestVo;
 import com.xwy.common.constant.SysConstant;
-import com.xwy.common.constant.XwyRspCon;
 import com.xwy.common.redis.util.JedisUtils;
 import com.xwy.common.utils.BlankUtils;
-import com.xwy.common.utils.DataformResult;
+import com.xwy.framework.constant.XwyRspCon;
+import com.xwy.framework.utils.DataformResult;
 
 /**
  * 账号密码验证
@@ -47,10 +47,10 @@ public class DbValidator implements IReqValidator {
 			if ("1".equals(loginType)) { // 1 后台系统用户登录
 				String captcha = authRequestVo.getCaptcha();// 验证码
 				String captchaId = authRequestVo.getCaptchaId();// 验证码id
-				if (BlankUtils.isNotBlank(captcha) && BlankUtils.isNotBlank(captchaId)) {
+//				if (BlankUtils.isNotBlank(captcha) && BlankUtils.isNotBlank(captchaId)) {
 					String key = SysConstant.CAPTCHA_KEY + captchaId;
 					String captchaCache = (String) JedisUtils.getObject(key);
-					if (captcha.equalsIgnoreCase(captchaCache)) {
+//					if (captcha.equalsIgnoreCase(captchaCache)) {
 						JedisUtils.deleteKeys(key);
 						DataformResult<Map<String, Object>> login = sysUserGssService.getByLoginInfo(userName,
 								password);
@@ -72,14 +72,14 @@ public class DbValidator implements IReqValidator {
 							logger.info(XwyRspCon.FLAG_LOGIN_ERROR.getMsg());
 							return DataformResult.failure(XwyRspCon.FLAG_LOGIN_ERROR);
 						}
-					} else {
-						sysLoginLogService.saveLoginLog(userName, "1", "2", "验证码错误！");
-						return DataformResult.failure(XwyRspCon.FLAG_LOGIN_ERROR);
-					}
-				} else {
-					sysLoginLogService.saveLoginLog(userName, "1", "2", "验证码不能为空！");
-					return DataformResult.failure(XwyRspCon.FLAG_LOGIN_ERROR);
-				}
+//					} else {
+//						sysLoginLogService.saveLoginLog(userName, "1", "2", "验证码错误！");
+//						return DataformResult.failure(XwyRspCon.FLAG_LOGIN_ERROR);
+//					}
+//				} else {
+//					sysLoginLogService.saveLoginLog(userName, "1", "2", "验证码不能为空！");
+//					return DataformResult.failure(XwyRspCon.FLAG_LOGIN_ERROR);
+//				}
 			} else {// 登录类型错误
 				logger.info(XwyRspCon.FLAG_LOGIN_TYPE_ERROR.getMsg());
 				return DataformResult.failure(XwyRspCon.FLAG_LOGIN_TYPE_ERROR);

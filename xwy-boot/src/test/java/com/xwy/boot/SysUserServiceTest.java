@@ -27,8 +27,8 @@ public class SysUserServiceTest {
 	@Test
 	public void save() {
 		SysUser sysUser = new SysUser();
-		sysUser.setUsername("xdd");
-		sysUser.setName("向大大");
+		sysUser.setUsername("xdd4");
+		sysUser.setName("向大大4");
 		sysUserService.add(sysUser);
 	}
 }

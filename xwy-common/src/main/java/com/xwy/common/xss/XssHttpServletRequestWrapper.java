@@ -16,6 +16,9 @@ import org.apache.commons.lang.StringUtils;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 
+import com.xwy.common.xss.HTMLFilter;
+import com.xwy.common.xss.SQLFilter;
+
 /**
  * XSS过滤处理
  * 

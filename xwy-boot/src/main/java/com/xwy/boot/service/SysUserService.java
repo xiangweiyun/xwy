@@ -80,4 +80,34 @@ public interface SysUserService extends IService<SysUser> {
 	 * @return
 	 */
 	public Map<String, Object> getLoginDatas(Long userId, boolean menuPerms);
+
+	/**
+	 * 根据登录用户获取用户信息
+	 * 
+	 * @author: xiangwy
+	 * @date: 2020-12-07 14:37:11
+	 * @param userName
+	 * @return
+	 */
+	public SysUser getByUserName(String username);
+
+	/**
+	 * 根据登录邮箱用户获取用户信息
+	 * 
+	 * @author: xiangwy
+	 * @date: 2020-12-07 14:37:11
+	 * @param email
+	 * @return
+	 */
+	public SysUser getByEmail(String email);
+
+	/**
+	 * 根据登录手机号获取用户信息
+	 * 
+	 * @author: xiangwy
+	 * @date: 2020-12-07 14:37:11
+	 * @param mobile
+	 * @return
+	 */
+	public SysUser getByMobile(String mobile);
 }

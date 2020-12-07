@@ -17,5 +17,11 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 		<!-- 引用AOP注解功能 end -->
+		<!-- lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 </project>

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.xwy.auth.feign.fallback.SysUserServiceFallbackImpl;
-import com.xwy.common.utils.DataformResult;
+import com.xwy.framework.utils.DataformResult;
 
 /**
  * 系统用户信息

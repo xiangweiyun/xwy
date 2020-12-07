@@ -17,10 +17,10 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import com.xwy.auth.manager.TokenManager;
 import com.xwy.auth.properties.JwtProperties;
 import com.xwy.auth.util.JwtTokenUtil;
-import com.xwy.common.constant.XwyRspCon;
 import com.xwy.common.utils.BlankUtils;
-import com.xwy.common.utils.DataformResult;
 import com.xwy.common.utils.WriterUtil;
+import com.xwy.framework.constant.XwyRspCon;
+import com.xwy.framework.utils.DataformResult;
 
 import io.jsonwebtoken.JwtException;
 

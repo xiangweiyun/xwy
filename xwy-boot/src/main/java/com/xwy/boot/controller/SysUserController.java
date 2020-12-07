@@ -18,10 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.xwy.boot.service.SysUserService;
 import com.xwy.common.utils.BlankUtils;
-import com.xwy.common.utils.DataformResult;
 import com.xwy.common.utils.SecurityUtils;
 import com.xwy.common.utils.jwt.TokenUtil;
 import com.xwy.entity.SysUser;
+import com.xwy.framework.utils.DataformResult;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -133,7 +133,7 @@ public class SysUserController {
 	}
 
 	/**
-	 * 根据username和password以及验证码查询用户
+	 * 根据username和password查询用户
 	 * 
 	 * @author: xiangwy
 	 * @date: 2020-12-03 09:18:41
