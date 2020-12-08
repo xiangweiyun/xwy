@@ -26,6 +26,8 @@
 		<swagger.version>1.5.20</swagger.version>
 		<swagger.starter>1.9.1.RELEASE</swagger.starter>
 		<swagger.bootstrap.ui>1.9.6</swagger.bootstrap.ui>
+		<swagger2.version>2.9.2</swagger2.version>
+		<springfox-swagger-ui>2.9.2</springfox-swagger-ui>
 		<lombok.version>1.16.18</lombok.version>
 		<javax.persistence.version>1.0</javax.persistence.version>
 		<!-- json Settings -->
@@ -117,6 +119,17 @@
 				<artifactId>swagger-spring-boot-starter</artifactId>
 				<version>${swagger.starter}</version>
 			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${swagger2.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${springfox-swagger-ui}</version>
+			</dependency>
+			<!-- 美化 -->
 			<dependency>
 				<groupId>com.github.xiaoymin</groupId>
 				<artifactId>swagger-bootstrap-ui</artifactId>

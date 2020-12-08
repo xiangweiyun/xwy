@@ -78,7 +78,7 @@ public class AuthFilter extends OncePerRequestFilter {
 
 		final String requestHeader = request.getHeader(jwtProperties.getHeader());
 		String authToken = null;
-		if (requestHeader != null && requestHeader.startsWith("Bearer ")) {
+		if (requestHeader != null && requestHeader.startsWith("Bearer")) {
 			authToken = requestHeader.substring(7);
 			// 验证token是否过期
 			try {
