@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.xwy.boot.service.SysUserService;
+import com.xwy.common.log.annotation.Log;
+import com.xwy.common.log.enums.BusinessType;
 import com.xwy.common.utils.BlankUtils;
 import com.xwy.common.utils.SecurityUtils;
 import com.xwy.common.utils.jwt.TokenUtil;
@@ -43,6 +45,7 @@ public class SysUserController {
 	@Autowired
 	private SysUserService sysUserService;
 
+	@Log(title = "系统_用户-新增", businessType = BusinessType.INSERT)
 	@ApiOperation(value = "系统_用户-新增", notes = "系统_用户-新增")
 	@PostMapping("/save")
 	public DataformResult<String> save(@RequestBody SysUser sysUser) {
@@ -142,6 +145,7 @@ public class SysUserController {
 	 * @param request
 	 * @return
 	 */
+	@Log(title = "系统_用户-登录", businessType = BusinessType.SELECT)
 	@ApiOperation(value = "系统_用户-登录", notes = "系统_用户-登录")
 	@GetMapping("/getByLoginInfo")
 	public DataformResult<Map<String, Object>> getByLoginInfo(String username, String password,

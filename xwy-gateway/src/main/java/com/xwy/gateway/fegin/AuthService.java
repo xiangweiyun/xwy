@@ -4,8 +4,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.xwy.framework.utils.DataformResult;
 import com.xwy.gateway.fegin.fallback.AuthServiceFallbackImpl;
+import com.xwy.gateway.util.DataformResult;
 
 /**
  * jwt 认证
