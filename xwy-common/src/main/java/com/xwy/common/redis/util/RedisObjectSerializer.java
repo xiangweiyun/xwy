@@ -11,8 +11,8 @@ import org.springframework.data.redis.serializer.SerializationException;
  * 
  * @author xiangwy
  * @date: 2020-12-02 10:23:22
- * @Copyright: Copyright (c) 2006 - 2020
- * @Company: 湖南创星科技股份有限公司
+ * @Copyright: Copyright (c) 2020
+ * @Company: XWY有限公司
  * @Version: V1.0
  */
 public class RedisObjectSerializer implements RedisSerializer<Object> {

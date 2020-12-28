@@ -16,7 +16,7 @@ import cn.trasen.mcpc.framework.base.OperContext;
  * @author ${author}
  * @date: ${currentDate}
  * @Copyright: Copyright (c) 2006 - ${currentYear}
- * @Company: 湖南创星科技股份有限公司
+ * @Company: XWY有限公司
  * @Version: V1.0
  */
 @SpringBootTest

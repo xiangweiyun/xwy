@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component;
  * 
  * @author xiangwy
  * @date: 2020-12-02 09:23:32
- * @Copyright: Copyright (c) 2006 - 2020
- * @Company: 湖南创星科技股份有限公司
+ * @Copyright: Copyright (c) 2020
+ * @Company: XWY有限公司
  * @Version: V1.0
  */
 @Component

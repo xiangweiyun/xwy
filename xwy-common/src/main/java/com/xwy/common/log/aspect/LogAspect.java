@@ -33,8 +33,8 @@ import com.xwy.common.utils.StringUtils;
  * 
  * @author xiangwy
  * @date: 2020-10-17 10:57:22
- * @Copyright: Copyright (c) 2006 - 2020
- * @Company: 湖南创星科技股份有限公司
+ * @Copyright: Copyright (c) 2020
+ * @Company: XWY有限公司
  * @Version: V1.0
  */
 @Aspect
@@ -181,10 +181,11 @@ public class LogAspect {
 	/**
 	 * 判断是否需要过滤的对象。
 	 * 
-	 * @param o 对象信息。
+	 * @param object 对象信息。
 	 * @return 如果是需要过滤的对象，则返回true；否则返回false。
 	 */
-	public boolean isFilterObject(final Object o) {
-		return o instanceof MultipartFile || o instanceof HttpServletRequest || o instanceof HttpServletResponse;
+	public boolean isFilterObject(final Object object) {
+		return object instanceof MultipartFile || object instanceof HttpServletRequest
+				|| object instanceof HttpServletResponse;
 	}
 }

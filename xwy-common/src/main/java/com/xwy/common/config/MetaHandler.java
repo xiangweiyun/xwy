@@ -13,7 +13,7 @@ import com.xwy.common.utils.jwt.TokenUtil;
  * 
  * @author xiangwy
  * @date: 2020-12-01 15:59:52
- * @Copyright: Copyright (c) 2006 - 2020
+ * @Copyright: Copyright (c) 2020
  * @Company: Xwy科技股份有限公司
  * @Version: V1.0
  */

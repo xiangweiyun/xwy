@@ -11,8 +11,8 @@ import com.xwy.auth.feign.fallback.SysLoginLogServiceFallbackImpl;
  * 
  * @author xiangwy
  * @date: 2020-12-03 10:38:41
- * @Copyright: Copyright (c) 2006 - 2020
- * @Company: 湖南创星科技股份有限公司
+ * @Copyright: Copyright (c) 2020
+ * @Company: XWY有限公司
  * @Version: V1.0
  */
 @FeignClient(name = "xwy-boot", fallback = SysLoginLogServiceFallbackImpl.class)

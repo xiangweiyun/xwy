@@ -5,8 +5,8 @@ package com.xwy.common.log.enums;
  * 
  * @author xiangwy
  * @date: 2020-10-17 10:51:29
- * @Copyright: Copyright (c) 2006 - 2020
- * @Company: 湖南创星科技股份有限公司
+ * @Copyright: Copyright (c) 2020
+ * @Company: XWY有限公司
  * @Version: V1.0
  */
 public enum OperatorType {

@@ -30,8 +30,8 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
  * 
  * @author xiangwy
  * @date: 2020-11-30 16:33:35
- * @Copyright: Copyright (c) 2006 - 2020
- * @Company: 湖南创星科技股份有限公司
+ * @Copyright: Copyright (c) 2020
+ * @Company: XWY有限公司
  * @Version: V1.0
  */
 public class CodeGenerator {

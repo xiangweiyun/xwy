@@ -14,8 +14,8 @@ import com.xwy.entity.SysUser;
  * 
  * @author xiangweiyun
  * @date: 2019-09-24 15:44:41
- * @Copyright: Copyright (c) 2006 - 2019
- * @Company: 湖南创星科技股份有限公司
+ * @Copyright: Copyright (c) 2020
+ * @Company: XWY有限公司
  * @Version: V1.0
  */
 @SpringBootTest
